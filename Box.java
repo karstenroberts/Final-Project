@@ -30,14 +30,27 @@ public class Box{
    public void setNames(ArrayList<String> names){
       this.names = names;
    }
-   public ArrayList<String> getNames(){
-      return names;
+   public String getNames(){//returns a string of names seperated by commas, not an ArrayList
+      String listOfNames = names.get(0);
+      if(names.size() > 1){ 
+         for (int ii = 1; ii < names.size(); ii++){
+            listOfNames += ", " + names.get(ii);
+         }
+      }
+      return listOfNames;
    }
    public void setEmails(ArrayList<String> emails){
       this.emails = emails;
    }
-   public ArrayList<String> getEmails(){
-      return emails;
+   public String getEmails(){//returns a string of emails seperated by commas, not an ArrayList
+      String listOfEmails = emails.get(0);
+      if(emails.size() > 1){
+         for (int ii = 1; ii < emails.size(); ii++){
+            listOfEmails += ", " + emails.get(ii);
+         }
+      }
+      
+      return listOfEmails;
    }
    public void setAddress(String address){
       this.address = address;
